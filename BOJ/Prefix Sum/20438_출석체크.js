@@ -14,8 +14,8 @@ for (let i = 3; i <= N + 2; i++) {
 
   if (sleep.includes(i)) continue;
 
-  for (let j = 0; j < send.length; j++) {
-    if (i % send[j] === 0) {
+  for (const s of send) {
+    if (i % s === 0) {
       // 출석함
       sum[i]--;
       break;
@@ -26,7 +26,6 @@ for (let i = 3; i <= N + 2; i++) {
 let answer = "";
 for (let i = 0; i < M; i++) {
   const [S, E] = input[3 + i];
-  // console.log(sum[E] - sum[S - 1]);
   answer += sum[E] - sum[S - 1] + "\n";
 }
 console.log(answer.substring(0, answer.length - 1));
