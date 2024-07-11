@@ -67,7 +67,7 @@ while (t < T) {
 }
 
 /*
-Trie 자료구조
+Trie 자료구조 = retrieval tree
 
 insert할 때 children이 없는 마지막 노드가 있는지 확인
 
